@@ -285,16 +285,3 @@ function openInWhatsapp(number) {
 function openInWhatsapp(number) {
    window.location.href = `whatsapp://send?phone=${number}&text=`;
 }
-function sendWhatsAppMessages(numbers, text) {
-   // Format and join the phone numbers
-   const formattedNumbers = numbers.map((number) => number.replace(/\D/g, "")).join(",");
-
-   const whatsappLink = `whatsapp://send?phone=${formattedNumbers}&text=${encodeURIComponent(text)}`;
-
-   window.location.href = whatsappLink;
-}
-
-const friendNumbers = ["7478103293", "7407745583"];
-const messageText = "Hello, this is a WhatsApp message!";
-
-sendWhatsAppMessages(friendNumbers, messageText);
