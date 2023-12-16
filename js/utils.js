@@ -282,6 +282,3 @@ function call(number) {
 function openInWhatsapp(number) {
    window.location.href = `whatsapp://send?phone=${number}&text=`;
 }
-function openInWhatsapp(number) {
-   window.location.href = `whatsapp://send?phone=${number}&text=`;
-}
