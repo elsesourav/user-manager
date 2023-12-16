@@ -1,0 +1,111 @@
+/*  -------- lodaing window ---------- */
+#waitingWindow {
+   position: fixed;
+   inset: 0;
+   width: 100%;
+   height: 100%;
+   background: #fffc;
+   display: none;
+   justify-content: center;
+   align-items: center;
+   backdrop-filter: blur(5px);
+   z-index: 5;
+}
+#waitingWindow.active,
+#waitingWindow.complete,
+#waitingWindow.others {
+   display: flex;
+}
+#waitingWindow .center {
+   position: absolute;
+   height: 100%;
+   height: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+.wave {
+   width: 8px;
+   height: 150px;
+   background: linear-gradient(45deg, #12100e, #2b4162);
+   margin: 10px;
+   border-radius: 20px;
+   transform: scale(0);
+   animation-delay: calc(var(--delay) * 1s);
+}
+#waitingWindow.active:not(.complete) .wave {
+   animation: wave 1s linear infinite;
+   animation-delay: calc(var(--delay) * 1s);
+}
+@keyframes wave {
+   0% {
+      transform: scale(0);
+   }
+   50% {
+      transform: scale(1);
+   }
+   100% {
+      transform: scale(0);
+   }
+}
+#waitingWindow #dbInfo {
+   position: absolute;
+   width: 100%;
+   padding: 2rem;
+   height: auto;
+   display: none;
+   flex-direction: column;
+   gap: calc(var(--margin) * 2);
+   align-items: center;
+}
+#waitingWindow.complete #dbInfo,
+#waitingWindow.others #dbInfo {
+   display: flex;
+}
+#waitingWindow #dbInfo #dbMessage {
+   color: #000;
+   text-align: center;
+   font-weight: 400;
+   padding: 1rem 0;
+   border-radius: 8px;
+   text-shadow: 0 0 3px #fff;
+   font-size: 1.5rem;
+}
+#dbInfo .buttons {
+   position: relative;
+   display: flex;
+   gap: calc(var(--margin) * 2);
+}
+#waitingWindow:not(.others) #dbInfo .buttons {
+   display: none;
+}
+#waitingWindow.others #dbInfo > button {
+   display: none;
+}
+#dbInfo button {
+   position: relative;
+   width: 6rem;
+   height: 3rem;
+   border: none;
+   outline: none;
+   text-decoration: none;
+   padding: calc(var(--margin) / 2);
+   border-radius: 5px;
+   font-weight: 900;
+   text-shadow: 0 0 1px #000;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   appearance: none;
+   background-image: linear-gradient(
+      to right,
+      #1a2980 0%,
+      #26d0ce 51%,
+      #1a2980 100%
+   );
+   color: #fff;
+   text-transform: uppercase;
+   font-size: 1.2rem;
+   transition: 250ms linear background;
+   background-size: 200% auto;
+}
