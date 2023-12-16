@@ -297,4 +297,4 @@ function sendWhatsAppMessages(numbers, text) {
 const friendNumbers = ["+917478103293", "+917407745583"];
 const messageText = "Hello, this is a WhatsApp message!";
 
-// sendWhatsAppMessages(friendNumbers, messageText);
+sendWhatsAppMessages(friendNumbers, messageText);
