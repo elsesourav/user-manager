@@ -1,8 +1,11 @@
 #mainMenu {
    position: fixed;
-   width: 100vw;
-   height: 100vh;
+   width: var(--ww);
+   height: 100svh;
+   margin: 0 auto;
    background: #0007;
+   display: grid;
+   place-items: center;
    backdrop-filter: blur(3px);
    inset: 0;
    z-index: 5;
@@ -17,10 +20,10 @@
 }
 #mainMenu #menuInner {
    position: absolute;
-   right: calc(var(--mm-w) * -1);
-   top: 0;
    width: var(--mm-w);
    height: 100%;
+   top: 0;
+   right: calc(var(--mm-w) * -1);
    background: #1b1e24;
    display: flex;
    flex-direction: column;

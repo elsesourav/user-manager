@@ -24,22 +24,17 @@
    --gap: 0.3rem;
    --cs: 2rem;
    --mm-w: 250px;
+   --ww: min(100svw, 440px);
 }
 body {
    position: relative;
-   width: 100vw;
-   height: 100vh;
+   width: 100svw;
+   height: 100svh;
    display: flex;
    justify-content: center;
    align-items: start;
    overflow-x: hidden;
    background: #151520;
-   background-image: url("../src/img/bg.jpg");
-   background-position: center;
-   background-repeat: no-repeat;
-   background-position-y: 0;
-   background-size: cover;
-   background-attachment: fixed;
    overflow-x: hidden;
    overflow-y: scroll;
    touch-action: auto;
@@ -54,8 +49,21 @@ body.removeScroll {
 }
 #responsive {
    position: relative;
-   width: min(100vw, 440px);
+   width: var(--ww);
    height: auto;
+   outline: solid 10000px #000;
+   z-index: 2;
+}
+#responsive::before {
+   content: "";
+   position: absolute;
+   width: var(--ww);
+   height: 100svh;
+   background-image: url("../src/img/bg.jpg");
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: contain;
+   z-index: 0;
 }
 header {
    position: relative;
