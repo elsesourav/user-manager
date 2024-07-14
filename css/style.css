@@ -59,6 +59,8 @@ body.removeScroll {
    position: absolute;
    width: var(--ww);
    height: 100svh;
+   top: 0;
+   background: #000;
    background-image: url("../src/img/bg.jpg");
    background-position: center;
    background-repeat: no-repeat;
