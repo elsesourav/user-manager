@@ -1,4 +1,4 @@
-[<h1 align="center"> User Manager </h1>](https://elsesourav.github.io/user-manager)
+<h1 align="center"> [User Manager](https://elsesourav.github.io/user-manager) </h1>
 
  ## `Overview`
  > The User Manager app is user friendly. Aims to simplify the management of users and groups. It provides a way to add delete users create groups and organize them effortlessly using drag and drop features. Open WhatsApp in Particular User, Run on both web and Android platforms. Best for **Network Marketing**.
